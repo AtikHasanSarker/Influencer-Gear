@@ -79,7 +79,8 @@ header .platform{
     border-image-slice: 1;
 }
 header .platform .logo{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 60px;
     padding: 36px 62px;
 }
@@ -169,7 +170,7 @@ footer .footer-box .copyright{
 }
 /* Responsive */
 @media screen and (max-width: 576px) {
-    header{
+    header, main{
         margin: 35px 20px;
         text-align: center;
     }
@@ -181,9 +182,11 @@ footer .footer-box .copyright{
 
     }
     header .platform{
+        margin: 50px auto 50px;
+    }
+    header .platform .logo{
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
-        margin: 50px auto 50px;
     }
     main .collection{
         margin: 0 20px;
