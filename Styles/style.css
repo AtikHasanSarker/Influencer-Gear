@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+/* Shared Style  */
+.btn{
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+    color: white;
+    border: none;
+}
+img{
+    width: 100%;
+}
+/* Header Related Styles */
+header, main{
+    margin: 85px 120px 100px;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #3A3A3A;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    font-size: 16px;
+    font-weight: 600;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul a{
+    text-decoration: none;
+    color: #3A3A3A;
+}
+header .hero-banner{
+    margin-top: 50px;
+    display: flex;
+    gap: 135px;
+    align-items: center;
+}
+header .hero-banner h1,
+header .hero-banner p{
+    margin-bottom: 16px;
+}
+header .hero-banner h1{
+    font-size: 3.25rem;
+    color: #3A3A3A;
+}
+header .hero-banner button{
+    border-radius: 41px;
+}
+header .hero-image{
+    background: url(../images/Circle-design.svg);
+    background-size: 100%;
+}
+header .platform{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 70px auto 100px;
+    border: 2px solid;
+    border-image: linear-gradient(#c0ccda25, #c0ccda9a, #c0ccda25);
+    border-image-slice: 1;
+}
+header .platform .logo{
+    display: flex;
+    gap: 60px;
+    padding: 36px 62px;
+}
+/* main section related styles */
+main .collection{
+    margin: 0 76px 100px;
+    text-align: center;
+}
+main .collection h3{
+    font-size: 1.75rem;
+    color: rgba(24, 25, 31, 1);
+}
+main .collection .popular-collection{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.popular-collection .card{
+    padding: 17px 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+.popular-collection .card h3{
+    font-weight: 500;
+}
+.popular-collection .card h5{
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 400;
+}
+.card .rating img{
+    width: 16px;
+}
+.popular-collection .card .rating span, .popular-collection .card p{
+    margin-left: 8px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: rgba(94, 99, 102, 1);
+}
+.collection a{
+    margin-top: 50px;
+    text-decoration: none;
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+}
+/* Feature Section Styles */
+main .feature{
+    display: flex;
+    gap: 96px;
+    align-items: center;
+}
+main .feature h2{
+    font-size: 2.375rem;
+    margin-bottom: 16px;
+    color: #0A0826;
+}
+main .feature p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #6C6C6C;
+}
+/* footer style */
+footer{
+    background-color: #0A0826;
+    display: flex;
+}
+footer .footer-box{
+    margin: 50px auto;
+    text-align: center;
+}
+footer .footer-box h4{
+    color: white;
+    font-size: 1.5rem;
+}
+footer .footer-box .copyright{
+    color: rgba(217, 219, 225, 1);
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+/* Responsive */
+@media screen and (max-width: 576px) {
+    header{
+        margin: 35px 20px;
+        text-align: center;
+    }
+    header nav .nav-menu{
+        display: none;
+    }
+    header .hero-banner{
+        flex-direction: column-reverse;
+
+    }
+    header .platform{
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        margin: 50px auto 50px;
+    }
+    main .collection{
+        margin: 0 20px;
+        text-align: center;
+    }
+    main .collection .popular-collection{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    main .feature{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
